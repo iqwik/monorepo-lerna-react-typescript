@@ -42,10 +42,7 @@ module.exports = {
         '@typescript-eslint',
     ],
     rules: {
-        'semi': [
-            'error',
-            'never',
-        ],
+        'semi': ['error', 'never'],
         'no-underscore-dangle': 'off',
         'no-unexpected-multiline': 'error',
         'indent': ['error', 4],
@@ -60,52 +57,35 @@ module.exports = {
         'jsx-a11y/click-events-have-key-events': 'off',
         'jsx-a11y/mouse-events-have-key-events': 'off',
         'jsx-a11y/control-has-associated-label': 'off',
-        'no-restricted-properties': ['off', {
-            object: 'Math',
-        }],
+        'no-restricted-properties': ['off', { object: 'Math' }],
         'react/jsx-closing-bracket-location': 'error',
         'react/jsx-one-expression-per-line': 'off',
-        'react/jsx-indent': [
-            'error',
-            4,
-        ],
-        'react/jsx-indent-props': [
-            'error',
-            4,
-        ],
+        'react/jsx-indent': ['error', 4],
+        'react/jsx-indent-props': ['error', 4],
         'react/jsx-props-no-spreading': 'off',
         'react/destructuring-assignment': 'off',
         'react/no-array-index-key': 'off',
         'react/state-in-constructor': 'off',
         'react/display-name': 'off',
-        'no-multiple-empty-lines': [
-            'error',
-            {
-                max: 1,
-                maxEOF: 1,
-            },
-        ],
+        'no-multiple-empty-lines': ['error', { max: 1, maxEOF: 1 }],
         'react/no-multi-comp': ['error', { ignoreStateless: true }],
         'import/no-named-as-default': 'off',
         'import/prefer-default-export': 'off',
         'max-len': 'off',
-        '@typescript-eslint/semi': [
-            'error',
-            'never',
-        ],
+        '@typescript-eslint/semi': ['error', 'never'],
         '@typescript-eslint/no-unused-expressions': ['error', { allowTernary: true }],
         '@typescript-eslint/no-var-requires': 'off',
         '@typescript-eslint/ban-types': 'off', // @TODO - включить в будущем
         '@typescript-eslint/no-shadow': 'off', // @TODO - включить в будущем
         '@typescript-eslint/indent': 'off', // @TODO - включить в будущем
-        '@typescript-eslint/no-unused-vars': 'off', // @TODO - включить в будущем
+        '@typescript-eslint/no-unused-vars': 'error',
         '@typescript-eslint/naming-convention': 'off', // @TODO - включить в будущем
         '@typescript-eslint/no-this-alias': 'off', // @TODO - включить в будущем
         '@typescript-eslint/explicit-module-boundary-types': 'off', // @TODO - включить в будущем
         // @TODO - see https://github.com/benmosher/eslint-plugin-import/issues/1174
         // @TODO - look at https://github.com/Dreamscapes/eslint-import-resolver-lerna
         'import/no-extraneous-dependencies': 'off',
-        'no-console': 'off',
+        'no-console': 'error',
         '@typescript-eslint/no-explicit-any': 'off', // @TODO - Убрать в будущем, когда финализируются большая часть типов
         "comma-dangle": "off",
         "@typescript-eslint/comma-dangle": ["error"]
@@ -117,12 +97,7 @@ module.exports = {
         'import/resolver': {
             'alias': {
                 'map': aliasesEslint,
-                'extensions': [
-                    '.js',
-                    '.jsx',
-                    '.ts',
-                    '.tsx'
-                ]
+                'extensions': ['.js', '.jsx', '.ts', '.tsx']
             },
             // node: {
             //     extensions: ['.js', '.ts', '.tsx', '.d.ts'],
