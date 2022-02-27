@@ -1,0 +1,34 @@
+{
+    "name": "@packages/config-jest",
+    "version": "1.0.0",
+    "private": true,
+    "main": "src/index.js",
+    "files": [
+        "src/index.js"
+    ],
+    "scripts": {
+        "lint": "echo \"No lint specified\" && exit 0",
+        "test": "echo \"No test specified\" && exit 0"
+    },
+    "dependencies": {
+        "@types/enzyme": "3.10.8",
+        "@types/jest": "26.0.23",
+        "babel-jest": "26.6.3",
+        "enzyme": "3.11.0",
+        "enzyme-adapter-react-16": "1.15.6",
+        "identity-obj-proxy": "3.0.0",
+        "jest": "26.6.3",
+        "jest-cli": "26.6.3",
+        "jest-canvas-mock": "2.3.1",
+        "jsdom": "15.2.1",
+        "ts-jest": "26.5.6"
+    },
+    "devDependencies": {
+        "@packages/config-aliases": "*",
+        "@packages/config-babel": "*"
+    },
+    "peerDependencies": {
+        "@packages/config-aliases": "*",
+        "@packages/config-babel": "*"
+    }
+}

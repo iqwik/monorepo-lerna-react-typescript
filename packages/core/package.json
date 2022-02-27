@@ -1,0 +1,52 @@
+{
+    "name": "@packages/core",
+    "version": "1.0.0",
+    "private": true,
+    "files": ["src"],
+    "scripts": {
+        "lint": "run-p lint:*",
+        "lint:eslint": "eslint --ignore-path .gitignore --ext .js,.jsx,.ts,.tsx .",
+        "lint:tsc": "tsc --project tsconfig.json --noEmit",
+        "pretest": "rimraf ./coverage",
+        "test": "cross-env NODE_ENV=test jest --passWithNoTests",
+        "test:coverage": "yarn test -- --coverage",
+        "prunecaches": "rimraf ./node_modules/.cache/"
+    },
+    "dependencies": {
+        "axios": "0.21.1",
+        "core-js": "3.17.2",
+        "history": "4.10.1",
+        "lodash": "4.17.21",
+        "qs": "6.10.1",
+        "querystring": "0.2.1",
+        "react": "16.14.0",
+        "react-dom": "16.14.0",
+        "react-redux": "7",
+        "react-router": "5.2.1",
+        "react-router-dom": "5.2.1",
+        "redux": "4.1.1",
+        "redux-actions": "2.6.5",
+        "redux-thunk": "2.3.0",
+        "regenerator-runtime": "0.13.9",
+        "reselect": "4.0.0"
+    },
+    "devDependencies": {
+        "@babel/core": "^7.16.7",
+        "@packages/config-aliases": "*",
+        "@packages/config-babel": "*",
+        "@packages/config-eslint": "*",
+        "@packages/config-jest": "*",
+        "@packages/config-typescript": "*",
+        "babel-loader": "^8.2.3",
+        "cross-env": "7.0.3",
+        "rimraf": "3.0.2",
+        "typescript": "^4.5.2",
+        "esbuild": "^0.14.0",
+        "esbuild-runner": "^2.2.1",
+        "openapi-typescript-codegen": "^0.12.3"
+    },
+    "peerDependencies": {
+        "@packages/config-aliases": "*",
+        "@packages/config-babel": "*"
+    }
+}

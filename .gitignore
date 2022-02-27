@@ -1,0 +1,16 @@
+# IDE
+.idea
+
+# VScode
+.vscode
+
+# reactJs
+/build
+/coverage
+
+# nodejs
+node_modules/
+yarn-error.log
+.yarn-cache
+/lerna-debug.log
+*/**/node_modules/

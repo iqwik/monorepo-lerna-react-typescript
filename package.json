@@ -1,0 +1,46 @@
+{
+    "name": "app",
+    "version": "1.0.0",
+    "private": true,
+    "workspaces": {
+        "packages": [
+            "domain",
+            "packages/*"
+        ]
+    },
+    "scripts": {
+        "bootstrap": "lerna bootstrap && yarn run deduplicate",
+        "deduplicate": "yarn-deduplicate --strategy fewer yarn.lock",
+        "build": "lerna run build --stream --scope @domain/app",
+        "dev": "lerna run dev --stream --scope @domain/app",
+        "pretest": "lerna run pretest --stream",
+        "test": "lerna run test --stream",
+        "test:coverage": "lerna run test:coverage --stream",
+        "lint": "lerna run lint --stream",
+        "upgrade": "yarn upgrade-interactive --latest",
+        "prunecaches": "lerna run prunecaches --stream",
+        "postinstall": "yarn run prunecaches && yarn run bootstrap",
+        "postuninstall": "yarn run prunecaches"
+    },
+    "devDependencies": {
+        "cross-env": "7.0.3",
+        "husky": "4.3.8",
+        "lerna": "^3.22.1",
+        "lint-staged": "10.5.4",
+        "nodemon": "2.0.12",
+        "npm-run-all": "4.1.5",
+        "rimraf": "3.0.2",
+        "yarn-deduplicate": "3.1.0"
+    },
+    "resolutions": {
+        "**/is-buffer": "^2.0.5",
+        "**/lodash": "^4.17.20",
+        "**/object-assign": "^4.1.1",
+        "**/react-is": "^17.0.1"
+    },
+    "engines": {
+        "node": ">=14.10.1",
+        "npm": ">=6.14.8",
+        "yarn": ">=1.22.5"
+    }
+}

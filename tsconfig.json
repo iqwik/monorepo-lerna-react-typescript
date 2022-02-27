@@ -1,0 +1,55 @@
+{
+    "compilerOptions": {
+        "allowJs": true,
+        "allowSyntheticDefaultImports": true,
+        "noFallthroughCasesInSwitch": true,
+        "noUnusedParameters": true,
+        "noUnusedLocals": true,
+        "noImplicitReturns": true,
+        "noEmit": true,
+        "strict": true,
+        "esModuleInterop": true,
+        "isolatedModules": true,
+        "skipLibCheck": true,
+        "noImplicitAny": false,
+        "declaration": true,
+        "declarationDir": "build/types",
+        "module": "esnext", //commonjs destroys "dynamic imports" which is used for code splitting
+        "moduleResolution": "node",
+        "target": "es6",
+        "jsx": "react",
+        "lib": [
+            "dom",
+            "es2015",
+            "es2016",
+            "es2017",
+            "es2020",
+            "esnext"
+        ],
+        "newLine": "lf",
+        "resolveJsonModule": true,
+        "types": [
+            "node",
+            "webpack-env",
+            "react",
+            "jest"
+        ],
+        "baseUrl": ".",
+        "outDir": "build",
+        "forceConsistentCasingInFileNames": true,
+        "suppressImplicitAnyIndexErrors": true,
+        "checkJs": false,
+        "experimentalDecorators": true,
+        "typeRoots": ["./types.d.ts", "./node_modules/@types"],
+        "paths": {
+            "@core/*": [ "./packages/core/src/*" ],
+            "@common/*": [ "./packages/common/src/*" ]
+        },
+        "sourceMap": true
+    },
+    "exclude": [
+        "**/.*/",
+        "**/node_modules",
+        "build"
+    ],
+}

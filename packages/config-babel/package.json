@@ -1,0 +1,37 @@
+{
+    "name": "@packages/config-babel",
+    "version": "1.0.0",
+    "private": true,
+    "main": "src/index.js",
+    "files": [
+        "src/index.js"
+    ],
+    "scripts": {
+        "lint": "echo \"No lint specified\" && exit 0",
+        "test": "echo \"No test specified\" && exit 0"
+    },
+    "dependencies": {
+        "airbnb-prop-types": "2.16.0",
+        "prop-types": "15.7.2"
+    },
+    "devDependencies": {
+        "@babel/cli": "7.15.4",
+        "@babel/core": "7.15.4",
+        "@babel/plugin-proposal-class-properties": "7.14.5",
+        "@babel/plugin-proposal-object-rest-spread": "7.14.7",
+        "@babel/plugin-proposal-optional-chaining": "7.14.5",
+        "@babel/plugin-proposal-private-methods": "7.14.5",
+        "@babel/plugin-syntax-dynamic-import": "7.8.3",
+        "@babel/plugin-transform-modules-commonjs": "7.15.4",
+        "@babel/plugin-transform-runtime": "7.15.0",
+        "@babel/preset-env": "7.15.4",
+        "@babel/preset-react": "7.14.5",
+        "@babel/preset-typescript": "7.15.0",
+        "babel-plugin-dynamic-import-node": "2.3.3",
+        "babel-plugin-transform-react-remove-prop-types": "0.4.24"
+    },
+    "peerDependencies": {
+        "airbnb-prop-types": "*",
+        "prop-types": "*"
+    }
+}

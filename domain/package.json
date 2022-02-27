@@ -1,0 +1,37 @@
+{
+    "name": "@domain/app",
+    "version": "1.0.0",
+    "private": true,
+    "files": [
+        "src"
+    ],
+    "scripts": {
+        "build": "cross-env NODE_ENV=production webpack --color -p --hide-modules --display-optimization-bailout",
+        "dev": "cross-env PROXY=develop nodemon --config ../../nodemon.json --exec \"webpack-dev-server --config webpack.config.js\"",
+        "lint": "run-p lint:*",
+        "lint:eslint": "eslint --ignore-path .gitignore --ext .js,.jsx,.ts,.tsx .",
+        "lint:tsc": "tsc --project tsconfig.json --noEmit",
+        "pretest": "rimraf ./coverage",
+        "test": "cross-env NODE_ENV=test jest --passWithNoTests",
+        "test:coverage": "yarn test -- --coverage",
+        "prunecaches": "rimraf ./node_modules/.cache/"
+    },
+    "dependencies": {
+        "@packages/core": "*",
+        "@packages/common": "*"
+    },
+    "devDependencies": {
+        "@packages/config-aliases": "*",
+        "@packages/config-babel": "*",
+        "@packages/config-eslint": "*",
+        "@packages/config-jest": "*",
+        "@packages/config-typescript": "*",
+        "@packages/config-webpack": "*",
+        "cross-env": "7.0.3",
+        "rimraf": "3.0.2"
+    },
+    "peerDependencies": {
+        "@packages/config-aliases": "*",
+        "@packages/config-babel": "*"
+    }
+}

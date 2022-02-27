@@ -1,0 +1,13 @@
+{
+    "watch": [
+        "packages/config-webpack/src/",
+        "packages/config-babel/src/"
+    ],
+    "events": {
+        "restart": "yarn prunecaches"
+    },
+    "ignore": [
+        "node_modules"
+    ],
+    "verbose": true
+}

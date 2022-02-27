@@ -1,0 +1,5 @@
+core.autocrlf false
+core.safecrlf false
+core.filemode false
+core.quotePath false
+core.longpaths true
