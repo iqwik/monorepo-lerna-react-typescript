@@ -1,3 +1,3 @@
 # Monorepo + Lerna + React + Typescript
 
-Чистый проект монорепозиторий на React + Typescript
+React + Typescript Mono Repository Starter Project

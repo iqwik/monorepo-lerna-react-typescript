@@ -5,8 +5,6 @@ const {
 
 const buildPath = path.resolve(__dirname, `../${buildFolder}`)
 
-console.log({ buildPath })
-
 const webpackConfigLocal = {
     entry: {
         app: path.resolve(__dirname, './src/index.tsx'),

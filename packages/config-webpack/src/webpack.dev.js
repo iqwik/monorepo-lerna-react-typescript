@@ -32,6 +32,4 @@ const webpackDev = (props) => smp.wrap(merge(webpackCommon(props), {
     ],
 }))
 
-console.log({ webpackDev })
-
 module.exports = webpackDev
