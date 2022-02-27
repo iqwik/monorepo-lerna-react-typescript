@@ -26,10 +26,10 @@ module.exports = (props) => merge(webpackCommon(props), {
         new HtmlWebpackPlugin({
             title: 'App',
             filename: 'index.html',
-            publicPath: path.resolve(__dirname, `../../../${buildFolder}`),
+            // publicPath: path.resolve(__dirname, `../../../${buildFolder}`),
             template: path.resolve(__dirname, './template.html'),
             hash: true,
-            minify: false,
+            minify: true,
             inject: 'body',
             scriptLoading: 'blocking',
         }),

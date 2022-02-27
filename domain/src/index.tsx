@@ -5,7 +5,7 @@ import ReactDOM from 'react-dom'
 
 import logoSvg from '@core/assets/img/logo.svg'
 
-import '@core/assets/styles/theme.scss'
+import '@core/styles/theme.scss'
 
 ReactDOM.render(
     <React.StrictMode>

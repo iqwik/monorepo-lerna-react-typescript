@@ -4,12 +4,6 @@ const { aliasesWebpack } = require('@packages/config-aliases')
 const { moduleRules, buildFolder } = require('./constants')
 
 const webpackCommon = (props) => ({
-    output: {
-        path: path.resolve(__dirname, `../${buildFolder}`),
-        globalObject: 'self',
-        filename: 'assets/js/[name].js',
-        chunkFilename: 'assets/js/[name].js',
-    },
     optimization: {
         splitChunks: {
             cacheGroups: {

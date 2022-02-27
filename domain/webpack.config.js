@@ -11,6 +11,9 @@ const webpackConfigLocal = {
     },
     output: {
         path: buildPath,
+        globalObject: 'self',
+        filename: 'assets/js/[name].js',
+        chunkFilename: 'assets/js/[name].js',
     },
     devServer: {
         contentBase: buildPath,
@@ -18,7 +21,7 @@ const webpackConfigLocal = {
 }
 
 const sassResources = [
-    path.resolve(__dirname, '../packages/core/src/assets/styles/_variables.scss'),
+    path.resolve(__dirname, '../packages/core/src/styles/_variables.scss'),
 ]
 
 if (process.env.NODE_ENV === 'production') {
